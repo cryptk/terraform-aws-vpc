@@ -292,6 +292,12 @@ variable "enable_classiclink_dns_support" {
   default     = null
 }
 
+variable "single_public_route_table" {
+  description = "Should be true if you want a separate route table per public subnet"
+  type        = bool
+  default     = true
+}
+
 variable "enable_nat_gateway" {
   description = "Should be true if you want to provision NAT Gateways for each of your private networks"
   type        = bool
